@@ -1,4 +1,5 @@
 'use strict';
+
 const Validator = require('../utils/validate');
 
 module.exports = {

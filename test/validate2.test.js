@@ -16,7 +16,7 @@ describe('test/validate2.test.js', () => {
 
   it('should GET /', () => {
     return app.httpRequest()
-      .get('/')
+      .get('/?title=111')
       .expect('hi, validate2')
       .expect(200);
   });

@@ -1,3 +1,5 @@
+'use strict';
+
 const schema = require('async-validator').default;
 const ResponseErrorCode = require('./response').ResponseErrorCode;
 
@@ -9,7 +11,7 @@ class Validator {
 
     function p() {
       return new Promise(
-        (resolve, _reject) => {
+        resolve => {
           _validator.validate(data, (err, fields) => {
             if (err) {
               resolve({ message: 'error', err, fields });
@@ -74,7 +76,7 @@ class Validator {
         }
       } else {
         await Validator.validate.call(this, _rules, data, code);
-        return;
+
       }
     }
 
@@ -104,11 +106,7 @@ class Validator {
 
     // 校验key  ^!代表排除这个key
     function handleKey(key) {
-      if (key.startsWith('!')) {
-        return false;
-      }
-      return true;
-
+      return !key.startsWith('!');
     }
   }
 
@@ -120,7 +118,7 @@ class Validator {
 
     function p() {
       return new Promise(
-        (resolve, _reject) => {
+        resolve => {
 
           _validator.validate(data, (err, fields) => {
             if (err) {

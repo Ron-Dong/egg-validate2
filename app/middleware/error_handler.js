@@ -1,3 +1,5 @@
+'use strict';
+
 const Response = require('../utils/response').default;
 const ResponseErrorCode = require('../utils/response').ResponseErrorCode;
 

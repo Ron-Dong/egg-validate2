@@ -39,7 +39,8 @@
   "files": [
     "app",
     "config",
-    "app.js"
+    "app.js",
+    "index.d.ts"
   ],
   "ci": {
     "version": "8, 10"
@@ -49,9 +50,9 @@
     "url": "git+https://github.com/eggjs/egg-validate2.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/Ron-Dong/egg-validate2/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-validate2#readme",
+  "homepage": "https://github.com/Ron-Dong/egg-validate2#readme",
   "author": "ron_dong",
   "license": "MIT"
 }
